@@ -1,0 +1,95 @@
+:root {
+    --hd-ft-bg-color: darkgrey;
+    --hd-ft-text-color: white;
+    --nav-bg-color: black;
+    --nav-text-color: white;
+    --sd-bg-color: lightgrey;
+}
+ 
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: auto auto 1fr 70px;
+    grid-template-areas: 
+        "hd hd hd"
+        "nav nav nav"
+        "main main sd"
+        "ft ft ft";
+    height: 100vh;
+    gap: 10px;
+}
+
+header > .head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header {
+    grid-area: hd;
+    background-color: var(--hd-ft-bg-color);
+    color: var(--hd-ft-text-color);
+    padding: 10px;
+}
+ 
+nav.navigatie {
+    grid-area: nav;
+    background-color: var(--nav-bg-color);
+    color: var(--nav-text-color);
+    padding: 10px;
+}
+ 
+.navigatie ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+}
+ 
+.navigatie a {
+    text-decoration: none;
+    color: var(--nav-text-color);
+}
+ 
+main {
+    grid-area: main;
+}
+ 
+aside {
+    grid-area: sd;
+    background-color: var(--sd-bg-color);
+}
+ 
+footer {
+    grid-area: ft;
+    background-color: var(--hd-ft-bg-color);
+    color: var(--hd-ft-text-color);
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ 
+.Mercedes {
+    width: 40px;
+    height: 40px;
+}
+ 
+.Mercedes-img img {
+    width: 25%;
+    height: auto;
+}
+ 
+.green {
+    background-color: green;
+}
+ 
+.yellow {
+    background-color: yellow;
+}
+ 
+.red {
+    background-color: red;
+}
+ 
